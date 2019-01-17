@@ -176,5 +176,47 @@ export const theProgram: Week[] = [
         ]
       }
     ]
+  },
+  {
+    days: [
+      {
+        rest: 60,
+        sets: [
+          { index: 1, reps: 40 },
+          { index: 2, reps: 50 },
+          { index: 3, reps: 25 },
+          { index: 4, reps: 25 },
+          { index: 5, reps: 50, lowerBound: true },
+        ]
+      },
+      {
+        rest: 45,
+        sets: [
+          { index: 1, reps: 20 },
+          { index: 2, reps: 20 },
+          { index: 3, reps: 23 },
+          { index: 4, reps: 23 },
+          { index: 5, reps: 20 },
+          { index: 6, reps: 20 },
+          { index: 7, reps: 18 },
+          { index: 8, reps: 18 },
+          { index: 9, reps: 53, lowerBound: true },
+        ]
+      },
+      {
+        rest: 45,
+        sets: [
+          { index: 1, reps: 22 },
+          { index: 2, reps: 22 },
+          { index: 3, reps: 30 },
+          { index: 4, reps: 30 },
+          { index: 5, reps: 25 },
+          { index: 6, reps: 25 },
+          { index: 7, reps: 18 },
+          { index: 8, reps: 18 },
+          { index: 9, reps: 55, lowerBound: true },
+        ]
+      }
+    ]
   }
 ]
