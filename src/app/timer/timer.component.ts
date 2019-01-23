@@ -9,7 +9,7 @@ import {map, startWith, switchMap, takeUntil, tap} from 'rxjs/operators';
 })
 export class TimerComponent implements OnInit {
 
-  private countdown = 0;
+  public countdown = 0;
   public time = 0;
 
   @Input()
