@@ -25,19 +25,10 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <div class="timer">
-    <mat-progress-spinner
-      class="example-margin"
-      [color]="'primary'"
-      [mode]="'determinate'"
-      [diameter]="200"
-      [value]="countdown">
-    </mat-progress-spinner>
-      <div class="countdown">{{time}}</div>
-    <button id="start"
-            mat-button
+    <button mat-button
             type="button"
-            (click)="startCountdown(day.rest)">Start Timer</button>
-    </div>
+            class="rest-button"
+            (click)="startRest(day.rest)">Rest</button>
+
   </mat-expansion-panel>
 </mat-accordion>
