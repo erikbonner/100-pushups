@@ -22,6 +22,10 @@ export class TimerDialogComponent {
     const arnieBytes = [
       'https://sound.peal.io/ps/audios/000/000/127/original/sound_414_%28over_to_down_%29?1469744052',
       'https://sound.peal.io/ps/audios/000/000/092/original/sound_231_%28over_to_down_%29?1469744272',
+      'https://sound.peal.io/ps/audios/000/000/133/original/sound_446_%28over_to_down_%29?1469744155',
+      'https://sound.peal.io/ps/audios/000/000/083/original/sound_186_%28over_to_down_%29?1469744237',
+      'https://sound.peal.io/ps/audios/000/000/123/original/sound_393_%28over_to_down_%29?1469744286',
+      'https://sound.peal.io/ps/audios/000/000/090/original/sound_221_%28over_to_down_%29?1469744038'
     ];
     this.randomArnie = arnieBytes[Math.floor(Math.random() * arnieBytes.length)];
   }
