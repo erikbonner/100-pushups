@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Observable, Subject, timer} from 'rxjs';
-import {map, startWith, switchMap, takeUntil, tap} from 'rxjs/operators';
+import {Observable, timer} from 'rxjs';
+import {map, switchMap, takeUntil, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-timer',
@@ -37,5 +37,4 @@ export class TimerComponent implements OnInit {
       error => console.error(error),
       () => this.timeout.emit());
   }
-
 }

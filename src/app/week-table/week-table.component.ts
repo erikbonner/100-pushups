@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {Week} from '../shared/week';
 import {TimerDialogComponent} from '../timer-dialog/timer-dialog.component';
@@ -9,16 +9,23 @@ import {TimerDialogComponent} from '../timer-dialog/timer-dialog.component';
   styleUrls: ['./week-table.component.scss']
 })
 export class WeekTableComponent {
-  @Input() week: Week
-  displayedColumns: string[] = ['index', 'reps'];
 
-  constructor(private readonly dialog: MatDialog) {
-  }
-  startRest(duration: number) {
+  @Output() selectedTimeRest = new EventEmitter<number>();
+
+  @Input() week: Week;
+  public displayedColumns: string[] = ['index', 'reps'];
+
+  constructor(private readonly dialog: MatDialog) { }
+
+  public startRest(duration: number): void {
     this.dialog.open(TimerDialogComponent, {
       height: '400px',
       width: '400px',
       data: {duration}
     });
+  }
+
+  public setExpanded(rest: number): void {
+    this.selectedTimeRest.emit(rest);
   }
 }
