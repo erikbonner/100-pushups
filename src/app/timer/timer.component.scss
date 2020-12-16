@@ -1,0 +1,20 @@
+@mixin center {
+ position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.countdown {
+  @include center();
+  font-size: 44px;
+}

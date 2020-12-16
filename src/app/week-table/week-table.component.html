@@ -1,0 +1,34 @@
+<mat-accordion [multi]="true">
+  <mat-expansion-panel *ngFor="let day of week.days; let i = index">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="day">
+            Day {{i+1}}
+        </div>
+      </mat-panel-title>
+      <mat-panel-description>
+          Rest {{day.rest}} seconds.
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    
+    <table mat-table [dataSource]="day.sets" class="mat-elevation-z8">
+      <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef> Set </th>
+        <td mat-cell *matCellDef="let set"> SET {{set.index}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="reps">
+        <th mat-header-cell *matHeaderCellDef> Reps </th>
+        <td mat-cell *matCellDef="let set"> {{set.reps}}{{set.lowerBound ? '+' : ''}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button mat-button
+            type="button"
+            class="rest-button"
+            (click)="startRest(day.rest)">Rest</button>
+
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,5 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab *ngFor="let week of theProgram; let i=index" label="Week {{i + 1}}"> 
+    <app-week-table [week]="week"></app-week-table>
+  </mat-tab>
+</mat-tab-group>

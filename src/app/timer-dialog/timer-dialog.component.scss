@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.done {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/originals/f7/f9/5b/f7f95bc8723b29233ed086eb63e3928c.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}

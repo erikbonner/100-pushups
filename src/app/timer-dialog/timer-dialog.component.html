@@ -1,0 +1,11 @@
+<app-timer [reset$]="reset$$" [duration]="data.duration" (timeout)="done = true"></app-timer>
+<ng-container *ngIf="done">
+  <audio autoplay>
+    <source [src]="randomArnie" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="done"></div>
+</ng-container>
+
+
+<div class="close" (click)="close()">X</div>
